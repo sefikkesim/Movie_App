@@ -30,7 +30,7 @@ const MovieCard = ({ title, poster_path, overview, vote_average }) => {
       </div>
       <div className="movie-over">
         <h4>Overview</h4>
-        <p> {readMore ? overview :`${overview.substring(0,100)}...`}</p>
+        <p> {readMore ? overview :`${overview.substring(0,50)}...`}</p>
         <button className = "btn-show" onClick={()=> setReadMore(!readMore)}>{readMore ? "Show Less" : "Show More" }</button>
       </div>
     </div>

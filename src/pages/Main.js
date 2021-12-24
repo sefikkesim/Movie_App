@@ -43,7 +43,7 @@ const Main = () => {
             value={searchTerm}
             onChange={handleChange}
           />
-          <button type="submit" className="btn-primary">Search</button>
+          <button type="submit" className="btn btn-primary">Search</button>
         </form>
         <div className="movie-container">
           {movies.map((movie) => (
