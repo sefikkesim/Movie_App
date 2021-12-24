@@ -9,6 +9,7 @@ const Login = () => {
     const handleSubmit = async () => {
         try {
             let user = await signInWithEmailAndPassword(auth,email,password)
+             navigate("/")
             console.log(user);
         } catch (error) {
             alert(error.message)

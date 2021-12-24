@@ -1,10 +1,16 @@
 import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import {auth} from "../auth/firebase-config"
+import {signOut} from "firebase/auth"
 
 const Navbar = () => {
   const navigate = useNavigate();
   const { currentUser } = useContext(AuthContext);
+
+const signOutFunc = async()=>{
+await signOut(auth)
+}
   return (
     <nav className=" navbar navbar-expand-md navbar-light bg-light">
       <div className="container-fluid">
@@ -27,7 +33,7 @@ const Navbar = () => {
             <button
               type="button"
               className="ms-2 btn btn-outline-light"
-              onClick={() => null}
+              onClick={signOutFunc}
             >
               Logout
             </button>

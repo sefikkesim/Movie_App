@@ -138,3 +138,10 @@ body {
   margin-left: 1.5rem;
   cursor: pointer;
 }
+.btn-show{
+  background :none;
+  border:none;
+  color : #0D47A1;
+  font-weight: 900;
+
+}
